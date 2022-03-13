@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_material_app/pages/graph-screen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,9 +16,8 @@ void main() {
         body: Container(
           // Center the content
           child: Center(
-            // Add Text
-            child: Text("Hello World!"),
-          ),
+              // Add Text
+              child: GraphScreen()),
         ),
       )));
 }
