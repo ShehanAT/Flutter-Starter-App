@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:simple_material_app/pages/graph-screen.dart';
 import 'package:simple_material_app/utils/datetime-chart.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:provider/provider.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:simple_material_app/services/shared_preference_service.dart';
 
+import 'package:provider/provider.dart';
+
+import 'package:simple_material_app/services/shared_preference_service.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 // void main() {
 
 //   runApp(MaterialApp(
@@ -42,7 +44,7 @@ import 'package:simple_material_app/services/shared_preference_service.dart';
 //       )));
 // }
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await SharedPreferencesService().init();
